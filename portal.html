@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Hír(hedt )oldalak</h1>
+        <!--
+            Figyeljük az iframe nyitótagjának a tördelését.
+            Ez szokványos megoldás amikor több attribútuma
+            van egy elemnek.
+        -->
+        <iframe
+          width="500"
+          height="500"
+          src="https://444.hu">
+            <!--
+                Az iframe páros elem. Régi böngészők, ha nem
+                tudták megjeleníteni az iframe-t, helyettesítőként
+                megjelenítették az iframe elembe írt tartalmat.
+
+                Ez ma már nincs így, de az esetleges régi HTML
+                oldalak miatt nem lehet kivenni a HTML specifikációból.
+            -->
+        </iframe>
+        <iframe
+          width="500"
+          height="500"
+          src="https://origo.hu"></iframe>
+        
+        <h1>Időjárás</h1>
+        <iframe
+          width="500"
+          height="500"
+          src="https://www.idokep.hu/idojaras/Budapest"></iframe>
+        
+        <h1>Random kép</h1>
+        <iframe
+          width="500"
+          height="500"
+          src="https://picsum.photos/500/500"></iframe>
+    </body>
+</html>
