@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="gy02.css">
+        <style>
+            /*
+            Figyeljük meg: a color tulajdonságot nem külön
+            deklaráltuk egy p szelektorral -- bár megtehettük
+            volna -- hanem a tartalmazó elemen. 
+
+            A CSS tulajdonságok öröklődése miatt az
+            #egyik-szekcio teljes tartalmának ezek lesznek
+            az alapértelmezett tulajdonságai.
+            */
+            #egyik-szekcio {
+                background-color: blanchedalmond;
+                color: navy;
+            }
+
+            #masik-szekcio {
+                background-color: burlywood;
+                color: darkgreen;
+            }
+
+            /*
+            #egyik-szekcio .paros <--- az összes elem amely
+            class attribútuma tartalmazza a "paros" osztalynevet
+            ÉS egy olyan elemen belül van, amelynek az id
+            attribútumának értéke "egyik-szekcio"
+
+            Figyeljük meg: a megöröklött color:navy szabályt
+            írjuk felül.
+            */
+            #egyik-szekcio .paros {
+                color: red;
+            }
+
+            #masik-szekcio .paros {
+                color: purple;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="egyik-szekcio">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                eget elementum mauris, sed dictum dui. Sed ante nunc, pharetra
+                nec mollis non, imperdiet et metus. Donec id ultricies libero.
+            </p>
+
+            <p class="paros">
+                Quisque ut orci at ligula gravida faucibus. Donec bibendum dui ut
+                vestibulum convallis. Nam rutrum, sem non ultricies auctor, nibh
+                justo venenatis libero, ut commodo leo ligula suscipit nisi.
+            </p>
+            <p>
+                Vivamus efficitur mauris nec nisl efficitur aliquet. Donec sed
+                quam nibh. Vivamus in ex fringilla, suscipit velit sit amet,
+                viverra quam. Praesent commodo vehicula tempor. Fusce auctor
+                massa sit amet purus bibendum luctus.
+            </p>
+            <p class="paros">
+                Duis ut mauris sit amet mauris imperdiet euismod vitae ac mi.
+                Nulla fringilla turpis eget justo hendrerit, nec interdum justo
+                dictum. Cras massa enim, bibendum non purus ac, tempus tincidunt
+                libero. Integer at sem condimentum, cursus ex eget, lobortis ex.
+            </p>
+        </section>
+        <section id="masik-szekcio">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                eget elementum mauris, sed dictum dui. Sed ante nunc, pharetra
+                nec mollis non, imperdiet et metus. Donec id ultricies libero.
+            </p>
+            <p class="paros">
+                Quisque ut orci at ligula gravida faucibus. Donec bibendum dui ut
+                vestibulum convallis. Nam rutrum, sem non ultricies auctor, nibh
+                justo venenatis libero, ut commodo leo ligula suscipit nisi.
+            </p>
+            <p>
+                Vivamus efficitur mauris nec nisl efficitur aliquet. Donec sed
+                quam nibh. Vivamus in ex fringilla, suscipit velit sit amet,
+                viverra quam. Praesent commodo vehicula tempor. Fusce auctor
+                massa sit amet purus bibendum luctus.
+            </p>
+            <p class="paros">
+                Duis ut mauris sit amet mauris imperdiet euismod vitae ac mi.
+                Nulla fringilla turpis eget justo hendrerit, nec interdum justo
+                dictum. Cras massa enim, bibendum non purus ac, tempus tincidunt
+                libero. Integer at sem condimentum, cursus ex eget, lobortis ex.
+            </p>
+        </section>
+    </body>
+</html>
