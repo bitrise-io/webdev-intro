@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        /*
+        Figyeljük meg, hogy sok, kicsi, célirányos szabállyal mennyivel
+        rugalmasabb a CSS kódunk, mivel a classokat szabadon kombinálhatjuk
+        a HTML elemeken
+         */
+        .balra-lebeg {
+            float: left;
+        }
+
+        .jobb-margoval {
+            margin-right: 20px;
+        }
+
+        .jobbra-lebeg {
+            float: right;
+        }
+
+        .bal-margoval {
+            margin-left: 20px;
+        }
+
+        .bal-clear {
+            clear: left;
+        }
+
+        .ketoldali-clear {
+            clear: both;
+        }
+
+        .blokk {
+            display: block;
+        }
+
+        .kozepen {
+            margin: auto;
+        }
+        </style>
+    </head>
+    <body>
+        <img class="balra-lebeg" src="torony.jpg">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat, sem
+            vitae vehicula scelerisque, risus leo scelerisque tortor, at lacinia turpis dui
+            a quam.
+            Duis fermentum condimentum lectus non consequat. Nam sollicitudin
+            sodales rutrum. Ut leo dui, maximus ac enim in, sodales gravida libero. Ut urna
+            mi, interdum a cursus eget, malesuada at nulla. Integer convallis sit amet risus
+            a feugiat.
+        </p>
+       <!--
+            class="bal-clear blokk kozepen"
+
+            Három általános class-szal könnyedén középre rendezzük.
+
+            Ha nem lennének ilyen általános CSS szabályaink, akkor id-val
+            style attribútummal vagy egy összevont class-szal is próbálkozhatnánk,
+            de mindhárom esetben, ha felveszünk másik, hasonló, de kicsit eltérő
+            képet, jelentősen romlana a kód átláthatósága.
+
+            ====================================================================
+            
+            class="blokk ..."
+            
+            Mivel az <img> alapból display: inline, sorfolytonosan jelenne meg,
+            ezért display:block-ra kell állítani.
+
+            ====================================================================
+            
+            class="... bal-clear ..."
+
+            A float: left-elt elem után minden elem körülveszi azt, egészen az
+            első clear:left-elt elemig.
+
+         -->
+        <img class="blokk bal-clear kozepen" src="torony.jpg">
+        <img class="jobbra-lebeg" src="torony.jpg">
+        <p class="bal-clear">
+            Nulla felis velit, semper nec lacus finibus, aliquet tristique augue.
+            Ut rutrum ligula non leo tempus scelerisque. Integer nec scelerisque dolor.
+            Vestibulum ullamcorper convallis bibendum. Aliquam erat volutpat. Donec velit
+            ante, vehicula sed augue non, luctus accumsan dolor. Vestibulum ante ipsum,
+            mollis in scelerisque eget, malesuada et sem. Etiam semper nisi at lacus iaculis
+            scelerisque.
+        </p>
+    </body>
+    </html>
+ 

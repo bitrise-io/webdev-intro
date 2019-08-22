@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+        table {
+            border-collapse: collapse;
+        }
+
+        /* 
+        A tr:first-child:hover szelektor nélkül a lentebbi tr:hover szabály
+        miatt a táblázat első sorára is érvényes lenne háttérszín.
+        */
+        tr:first-child,
+        tr:first-child:hover {
+            background-color: royalblue;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background-color: gainsboro;
+        }
+
+        td {
+            border: 1px solid grey;
+            padding: 5px;
+        }
+
+        button {
+            background-color: royalblue;
+            color: white;
+        }
+
+        button:hover {
+            background-color: skyblue;
+            color: white;
+            cursor: pointer;
+        }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>megnevezés</td>
+                <td>egységár</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>ceruza</td>
+                <td>100 Ft</td>
+                <td>
+                    <button>kosárba</button>
+                </td>
+            </tr>
+            <tr>
+                <td>golyóstoll</td>
+                <td>200 Ft</td>
+                <td>
+                    <button>kosárba</button>
+                </td>
+            </tr>
+            <tr>
+                <td>rakétavető</td>
+                <td>2 000 000 000 Ft</td>
+                <td>
+                    <button>kosárba</button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
